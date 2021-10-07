@@ -1,0 +1,402 @@
+html, body {
+  
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+}
+
+body {
+  --background-color: #f6f8ff;
+  --card-color: #fefefe;
+  --button-color: #0079ff;
+  --bio-color: #697c9a;
+  --icon-color: #4b6a9b;
+  --stats-color: #2b3442;
+  --logo-color: black;
+  background-color: var(--background-color);
+  --filter-color: none;
+
+}
+
+body.dark {
+  --background-color: rgb(20, 29, 47);
+  --card-color: #1e2a47;
+  --stats-color: #ffffff;
+  --logo-color: #ffffff;
+  --bio-color: #ffffff;
+  --filter-color: invert(100%) sepia(4%) saturate(0%) hue-rotate(206deg) brightness(104%) contrast(103%);
+
+  
+}
+
+.container {
+  /* border: 2px solid black; */
+  text-align: center;
+  margin: auto;
+  width: 730px;
+}
+
+/* Navbar  */
+
+.navbar {
+  margin-top: 3rem;
+}
+
+.navbar h1 {
+  color: var(--logo-color);
+  display: inline-block;
+  float: left;
+  
+
+}
+
+.navbar p {
+  display: inline-block;
+}
+
+.toggle {
+  position: relative;
+  float: right;
+  top: 0.7rem;
+  z-index: 99;
+}
+
+.toggle p {
+  color: var(--bio-color);
+}
+
+.toggle .dark-icon:hover {
+  color: black;
+}
+
+.toggle .light-icon:hover {
+color: var(--icon-color);
+}
+
+.light-icon {
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  }
+  
+  .dark-icon {
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .search-error {
+    color: red;
+    position: absolute;
+    right: 10rem;
+    bottom: 1rem;
+  }
+
+/* Searchbar */
+
+.search-bar {
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.search-bar button, input {
+  border-radius: 12px;
+  font-family: 'Space Mono', monospace;
+
+}
+
+.search-bar button {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 10px;
+  color: #fefefe;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.7rem;
+  right: 1rem;
+  position: absolute;
+  margin-top: 5px;
+  width: 6rem;
+  z-index: 100;
+  
+  
+}
+
+.search-bar button:hover {
+  opacity: 0.6;
+}
+
+.search-bar input {
+  background: url("./assets/icon-search.svg") left no-repeat;
+  background-color: var(--card-color);
+  background-position-x: 1rem;
+  border: none;
+  box-sizing: border-box;
+  color: var(--logo-color);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 5rem;
+  width: 100%;
+}
+
+.search-bar input:focus {
+  background: none;
+  background-color: var(--card-color);
+  outline: none;
+}
+
+::placeholder {
+  color: var(--logo-color);
+}
+
+/* Card */
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-align: left;
+}
+
+.card img {
+  border-radius: 50%;
+  float: left;
+  width: 100px;
+}
+
+.card h2 {
+  color: var(--logo-color);
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+
+
+.username {
+  color: var(--button-color);
+  margin-top: 0;
+}
+
+.bio {
+  color: var(--bio-color);
+  margin-bottom: 2rem;
+}
+
+.join-date {
+  color: var(--bio-color);
+  display: inline-block;
+  float: right;
+  margin-right: 2rem;
+  position: relative;
+  bottom: 5.5rem;
+}
+
+.follower-info {
+  background-color: var(--background-color);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  padding: 1.5rem;
+}
+
+.card .social-icon {
+  border-radius: 0;
+  filter: var(--filter-color);
+  margin-right: 1rem;
+  width: 20px;
+}
+
+.social-section {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  
+}
+
+.location {
+  margin-right: 1rem;
+}
+
+.twitter-and-location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.website-and-company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.stats {
+  color: var(--logo-color);
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.stats-headings {
+  color: var(--bio-color);
+}
+
+.social-links {
+  color: var(--bio-color);
+  cursor: pointer;
+}
+
+.social-links:hover {
+  text-decoration: underline;
+}
+
+.picture-side img {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+
+.links {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    width: 573px;
+  }
+
+  /* Card */
+  .card {
+    display: block;
+    height: 450px;
+  }
+
+  .join-date {
+    float: none;
+    bottom: 0rem;
+    margin-left: 2rem;
+    margin-top: 0rem;
+  }
+
+  .bio {
+    display: block;
+    margin-left: 2.5rem;
+  }
+
+
+  .follower-info {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+
+  .card h2 {
+    margin-left: 2rem;
+  }
+
+  .username {
+    margin-left: 10.7rem;
+  }
+
+  .card img {
+    margin-left: 40px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .container {
+    width: 90%;
+  }
+
+  /* Navbar */
+  .navbar {
+    margin-top: 0;
+  }
+
+  /* Searchbar */
+  .search-bar button {
+    padding: 0.7rem 0.4rem;
+    right: 10px;
+    width: 5rem;
+  }
+
+  .search-bar input {
+    font-size: 12px;
+    padding-left: 3.5rem;
+  }
+
+  
+
+  /* Card */
+  .twitter-and-location {
+    display: block;
+    margin-bottom: 0;
+
+    
+  }
+
+
+  .card h2 {
+    font-size: 16px;
+    
+  }
+
+  .follower-info {
+    width: 250px;
+  }
+
+  .join-date {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  
+
+ .twitter-links {
+   position: relative;
+   
+ }
+
+ .card {
+   height: auto;
+ }
+  
+  .website-and-company {
+    display: block;
+  }
+
+  
+  
+  .picture-side img {
+    margin-left: 20px;
+  }
+
+  
+
+  .twitter-and-location div {
+    margin-bottom: 1rem;
+  }
+
+  .website-and-company  div{
+    margin-bottom: 1rem;
+  }
+
+
+  .stats-headings {
+    font-size: 13px;
+  }
+
+  .bio {
+    margin-top: 3rem;
+  }
+
+  .username {
+    margin-bottom: 0.5rem;
+    margin-left: 9.5rem;
+  }
+  
+}
+
+
