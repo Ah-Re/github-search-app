@@ -28,6 +28,8 @@ body.dark {
   
 }
 
+
+
 .container {
   /* border: 2px solid black; */
   text-align: center;
@@ -112,6 +114,7 @@ color: var(--icon-color);
   border-radius: 10px;
   color: #fefefe;
   cursor: pointer;
+  font-size: 16px;
   font-weight: 700;
   padding: 0.7rem;
   right: 1rem;
@@ -134,6 +137,7 @@ color: var(--icon-color);
   border: none;
   box-sizing: border-box;
   color: var(--logo-color);
+  font-size: 16px;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 5rem;
@@ -317,6 +321,7 @@ color: var(--icon-color);
 
   /* Searchbar */
   .search-bar button {
+    font-size: 12px;
     padding: 0.7rem 0.4rem;
     right: 10px;
     width: 5rem;
